@@ -1,15 +1,17 @@
 import React from 'react'
-// import AddJoke from './AddJoke'
-// import Joke from './Joke'
+import {useState} from 'react'
 import {AddJoke, Joke} from './'
 
-function JokeContainer({title, func}) {
+function JokeContainer({title}) {
+
+    const [jokeArray, setJokeArray] = useState([])
+
     return (
         <div>
             Joke Container
             <p>{title}</p>
-            <AddJoke func={func}/>
-            <Joke />
+            <AddJoke jokeArray={jokeArray} setJokeArray={setJokeArray}/>
+            <Joke jokeArray={jokeArray}/>
         </div>
     )
 }

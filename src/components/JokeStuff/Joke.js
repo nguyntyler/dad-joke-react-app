@@ -1,8 +1,10 @@
 import React from 'react'
 
-function Joke(props) {
+function Joke({jokeArray}) {
     return (
-        <h3>This is the joke.</h3>
+        <section>
+            {jokeArray.map(j=>(<p>{j}</p>))}
+        </section>
     )
 }
 

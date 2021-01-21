@@ -6,20 +6,11 @@ import {JokeContainer, Header, GetJoke} from './components'
 
 function App() {
 
-  const [joke, setJoke] = useState('')
-  useEffect(()=> {
-    GetJoke(setJoke)
-  }, [])
-
-  const runGetJoke = () => {
-    GetJoke(setJoke)
-  }
-
   return (
     <div className="App">
       <header className="App-header">
         <Header />
-        <JokeContainer title={joke} func={runGetJoke}/>
+        <JokeContainer/>
       </header>
     </div>
   );

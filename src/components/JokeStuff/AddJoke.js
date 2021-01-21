@@ -1,9 +1,10 @@
 import React from 'react'
+import GetJoke from './GetJoke';
 
-function AddJoke({func}) {
+function AddJoke({jokeArray, setJokeArray}) {
     return (
         <nav>
-        	<button onClick={func}>Get a new joke!</button>
+        	<button onClick={() => GetJoke(jokeArray, setJokeArray)}>Get a new joke!</button>
         </nav>
     )
 }

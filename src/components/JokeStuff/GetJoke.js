@@ -1,4 +1,4 @@
-async function GetJoke(setJoke) {
+async function GetJoke(jokeArray, setJokeArray) {
     const jokePromise = fetch("https://icanhazdadjoke.com", {
       headers: {
       Accept: "application/json",
@@ -6,8 +6,7 @@ async function GetJoke(setJoke) {
     });
     const response = await jokePromise;
     const jokeData = await response.json();
-    console.log("This is inside the main func", jokeData.joke)
-    setJoke(jokeData.joke)
+    setJokeArray([...jokeArray, jokeData.joke])
   }
 
 export default GetJoke;

@@ -11,7 +11,9 @@ function JokeContainer({title}) {
             Joke Container
             <p>{title}</p>
             <AddJoke jokeArray={jokeArray} setJokeArray={setJokeArray}/>
-            <Joke jokeArray={jokeArray}/>
+            {jokeArray.map((j, idx) => <Joke
+                                        key={idx}
+                                        joke={j} />)}
         </div>
     )
 }

@@ -6,6 +6,7 @@ async function GetJoke(jokeArray, setJokeArray) {
     });
     const response = await jokePromise;
     const jokeData = await response.json();
+    console.log(jokeData.joke)
     setJokeArray([...jokeArray, jokeData.joke])
   }
 
